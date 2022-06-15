@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "StudentInfo";
+}
+
+<h2>StudentInfo</h2>
+
+
+
+<a class="btn btn-success" href="~/Student/StudentAdd" role="button">Add</a>
+
+<form action=" " method="">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Religion</th>
+                <th scope="col">Email</th>
+                <th scope="col">Address</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Institute</th>
+            
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <th scope="row">@p.Id</th>
+                    <td>@p.Name</td>
+                    <td>@p.Religion</td>
+                    <td>@p.Email</td>
+                    <td>@p.Address</td>
+                    <td>@p.Phone</td>
+                    <td>@p.Institute</td>
+
+                    <td> 
+                    <a class="btn btn-warning" href="~/Student/StudentUpdate/@p.Id" role="button">Update</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-danger" href="~/Student/StudentDelete/@p.Id" role="button">Delete</a>
+                    </td>
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+</form>

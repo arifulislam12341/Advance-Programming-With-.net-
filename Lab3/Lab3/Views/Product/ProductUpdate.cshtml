@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "ProductUpdate";
+}
+
+<h2>ProductUpdate</h2>
+
+<form action="" method="post">
+
+
+    <h3>NAME</h3> <input type="text" name="Name" value="@(Model !=null ? Model.Name:"")" class="form-control" />
+    @Html.ValidationMessage("Name")
+    <h3>PRICE</h3> <input type="text" name="Price" value="@(Model !=null ? Model.Price:"")" class="form-control" />
+    @Html.ValidationMessage("Price")
+    <h3>Quantity</h3> <input type="text" name="Quantity" value="@(Model !=null ? Model.Quantity:"")" class="form-control" />
+    @Html.ValidationMessage("Quantity")
+
+
+    <button type="submit">Update</button>
+
+</form>

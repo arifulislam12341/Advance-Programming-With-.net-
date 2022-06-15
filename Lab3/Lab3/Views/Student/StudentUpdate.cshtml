@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "StudentUpdate";
+}
+
+<h2>StudentUpdate</h2>
+
+
+<form action="" method="post">
+    <h3>ID</h3> <input type="text" name="Id" value="@(Model.Id)" class="form-control" disabled />
+   
+
+    <h3>NAME</h3> <input type="text" name="Name" value="@(Model !=null ? Model.Name:"")" class="form-control" />
+    @Html.ValidationMessage("Name")
+    <h3>Religion</h3> <input type="text" name="Religion" value="@(Model !=null ? Model.Religion:"")" class="form-control" />
+    @Html.ValidationMessage("Religion")
+    <h3>Email</h3> <input type="email" name="Email" value="@(Model !=null ? Model.Email:"")" class="form-control" />
+    @Html.ValidationMessage("Email")
+    <h3>Address</h3> <input type="text" name="Address" value="@(Model !=null ? Model.Address:"")" class="form-control" />
+    @Html.ValidationMessage("Address")
+    <h3>Phone</h3> <input type="text" name="Phone" value="@(Model !=null ? Model.Phone:"")" class="form-control" />
+    @Html.ValidationMessage("Phone")
+    <h3>Institute</h3> <input type="text" name="Institute" value="@(Model !=null ? Model.Institute:"")" class="form-control" />
+    @Html.ValidationMessage("Institute")
+
+    <br />
+    <button type="submit" class="btn btn-success">Update</button>
+
+</form>

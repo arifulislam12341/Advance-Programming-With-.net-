@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Student Information Form</h2>
+<form action="" method="post">
+
+    <h3>ID:</h3> <input type="text" value="@(Model !=null ? Model.id :"")" class="form-control" name="id" />
+    @Html.ValidationMessage("id")
+    <h3>Name:</h3><input type="text" value="@(Model !=null ? Model.name :"")" class="form-control" name="name" />
+    @Html.ValidationMessage("name")
+    <h3>DOB:</h3><input type="date" value="@(Model !=null ? Model.dob :"")" class="form-control" name="dob" />
+    @Html.ValidationMessage("dob")
+    <span>@TempData["message"]</span>
+    <h3>Password:</h3><input type="password" value="@(Model !=null ? Model.password :"")" class="form-control" name="password" />
+    @Html.ValidationMessage("password")
+    <h3>ConfirmPassword:</h3><input type="password" value="@(Model !=null ? Model.confirmpassword :"")" class="form-control" name="confirmpassword" />
+    @Html.ValidationMessage("confirmpassword")
+    <h3>Email:</h3><input type="email" value="@(Model !=null ? Model.email :"")" class="form-control" name="email" />
+    @Html.ValidationMessage("email")
+
+    <br />
+
+
+    <input type="submit" class="btn btn-success" />
+
+
+
+</form>
+

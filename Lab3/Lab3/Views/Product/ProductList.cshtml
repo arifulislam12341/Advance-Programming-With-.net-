@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "ProductList";
+}
+
+<h2>ProductList</h2>
+<a class="btn btn-success" href="~/Product/ProductAdd" role="button">Add</a>
+
+<form action=" " method="">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <!--
+                <th scope="col">Totalprice</th>-->
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <th scope="row">@p.Id</th>
+                    <td>@p.Name</td>
+                    <td>@p.Price</td>
+                    <td>@p.Quantity</td>
+                    <!--  <td>@TempData["totalprice"]</td>-->
+                    <td> <a class="btn btn-warning" href="~/Product/ProductUpdate/@p.Id" role="button">Update</a></td>
+                    <td>
+                        <a class="btn btn-danger" href="~/Product/ProductDelete/@p.Id" role="button">Delete</a>
+                    </td>
+                </tr>
+                    }
+        
+
+            </tbody>
+    </table>
+</form>
+
